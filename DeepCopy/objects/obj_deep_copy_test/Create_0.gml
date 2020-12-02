@@ -23,7 +23,7 @@ show_debug_message(struct);
 show_debug_message(new_araay);
 show_debug_message(new_struct);
 
-// But not holding the same references
+// But aren't holding the same references
 show_debug_message(array == new_araay);                                             // false
 show_debug_message(array[0] == new_araay[0]);                                       // false
 show_debug_message(array[1] == new_araay[1]);                                       // false
