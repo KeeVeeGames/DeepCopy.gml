@@ -17,7 +17,7 @@ var struct = new Class3(
 var new_araay = deep_copy(array);
 var new_struct = deep_copy(struct);
 
-// Both have identival values
+// Both have identical values
 show_debug_message(array);
 show_debug_message(struct);
 show_debug_message(new_araay);

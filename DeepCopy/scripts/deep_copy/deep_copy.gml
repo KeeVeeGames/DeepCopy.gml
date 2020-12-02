@@ -1,6 +1,6 @@
 /// @function                       deep_copy(ref)
 /// @param {T} ref                  Thing to deep copy
-/// @returns {T}                    New array, or new struct, or new instance of class, anything else (real / string / etc.) will be returned as-is
+/// @returns {T}                    New array, or new struct, or new instance of the class, anything else (real / string / etc.) will be returned as-is
 /// @description                    Returns a deep recursive copy of the provided array / struct / constructed struct
 function deep_copy(ref) {
     var ref_new;
