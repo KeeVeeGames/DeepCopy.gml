@@ -32,12 +32,8 @@ var new_struct = deep_copy(struct);
 // Both have identical values
 show_debug_message(array);
 show_debug_message(new_araay);
-// [ {  },[ [ 0 ],[ 1 ],[ 2 ] ],{ class : { a : 0, b : 1, c : 2 }, hmm : "hmm", huh : "huh" } ]
-// [ {  },[ [ 0 ],[ 1 ],[ 2 ] ],{ class : { a : 0, b : 1, c : 2 }, hmm : "hmm", huh : "huh" } ]
 show_debug_message(struct);
 show_debug_message(new_struct);
-// { thing : { a : 0, b : 1, c : 2 }, stuff : { thing : { thing : [ 0,1,2 ], stuff : { three : 3, four : 4, five : 5 } } } }
-// { thing : { a : 0, b : 1, c : 2 }, stuff : { thing : { thing : [ 0,1,2 ], stuff : { three : 3, four : 4, five : 5 } } } }
 
 // But aren't holding the same references
 show_debug_message(array == new_araay);                                     // false
