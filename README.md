@@ -56,8 +56,8 @@ show_debug_message(struct.stuff == new_struct.stuff);                       // f
 show_debug_message(struct.stuff.thing == new_struct.stuff.thing);           // false
 
 // And structs are preserving its types so you can use static fields
-new_araay[0].func();            // hello!
-new_struct.thing.func();        // hello!
+new_araay[0].func();
+new_struct.thing.func();
 ```
 
 ## Author:
