@@ -36,7 +36,7 @@ var struct = new Class3(
     )
 );
 
-var new_araay = deep_copy(array);
+var new_array = deep_copy(array);
 var new_struct = deep_copy(struct);
 
 // Both have identical values
@@ -46,10 +46,10 @@ show_debug_message(struct);
 show_debug_message(new_struct);
 
 // But aren't holding the same references
-show_debug_message(array == new_araay);                                     // false
-show_debug_message(array[0] == new_araay[0]);                               // false
-show_debug_message(array[1] == new_araay[1]);                               // false
-show_debug_message(array[2] == new_araay[2]);                               // false
+show_debug_message(array == new_array);                                     // false
+show_debug_message(array[0] == new_array[0]);                               // false
+show_debug_message(array[1] == new_array[1]);                               // false
+show_debug_message(array[2] == new_array[2]);                               // false
 show_debug_message(struct == new_struct);                                   // false
 show_debug_message(struct.thing == new_struct.thing);                       // false
 show_debug_message(struct.stuff == new_struct.stuff);                       // false
