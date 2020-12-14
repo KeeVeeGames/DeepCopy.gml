@@ -10,7 +10,7 @@ The method behind this is coming from my [finding](https://twitter.com/KeeVeeGam
 * Copying ds'es won't deep copy them but pass them through as real numbers.<sup>✶</sup>
 * Be mindful about circular references, they will make the algorithm stuck in an infinite loop.<sup>✶</sup>
 * There is no way to mark a field to not be "copiable".<sup>✶</sup>
-* Copying function references will shallow copy the reference to the original method, as I am not aware of any way to deep copy functions.
+* Copying function references will shallow copy the reference to the original method, as deep copying functions is not possible (and doesn't make much sense).
 
 <sup>✶</sup> — you may consider using DeepCopy+ and Protoclasses as a part of GMProto framework, that are solving the problem of deep cloning ds'es, preventing circular references, adding the way to mark fields "unserializable" and having better type checking (not currently released, [stay tuned](https://twitter.com/KeeVeeGames)).
 
