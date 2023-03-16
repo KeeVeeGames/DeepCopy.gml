@@ -25,6 +25,10 @@ function deep_copy(ref) {
                 ref_new = {};
                 break;
                 
+            case "function":
+                ref_new = ref;
+                break;
+                
             default:
                 var constr = method(undefined, asset_get_index(base));
                 ref_new = new constr();
