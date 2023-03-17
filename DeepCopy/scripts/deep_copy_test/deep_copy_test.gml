@@ -12,7 +12,7 @@ function Class2() : Class1() constructor {
     c = 2;
 }
 
-function Class3(_thing, _stuff)constructor  {
+function Class3(_thing, _stuff) constructor {
     thing = _thing;
     stuff = _stuff;
 }

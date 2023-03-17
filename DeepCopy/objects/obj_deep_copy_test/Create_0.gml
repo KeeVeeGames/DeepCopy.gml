@@ -36,3 +36,13 @@ show_debug_message(struct.stuff.thing == new_struct.stuff.thing);           // f
 // And structs are preserving its types so you can use static fields
 new_array[0].func();            // hello!
 new_struct.thing.func();        // hello!
+
+// Structs have the same static chain, i.e. are instances of the same constructors
+show_debug_message(is_instanceof(struct, Class3));                  // true
+show_debug_message(is_instanceof(new_struct, Class3));              // true
+show_debug_message(is_instanceof(struct.thing, Class2));            // true
+show_debug_message(is_instanceof(new_struct.thing, Class2));        // true
+show_debug_message(is_instanceof(struct.thing, Class1));            // true
+show_debug_message(is_instanceof(new_struct.thing, Class1));        // true
+show_debug_message(is_instanceof(struct.stuff, Class4));            // true
+show_debug_message(is_instanceof(new_struct.stuff, Class4));        // true

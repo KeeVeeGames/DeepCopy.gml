@@ -17,21 +17,17 @@ function deep_copy(ref) {
         return ref_new;
     }
     else if (is_struct(ref)) {
-        var base = instanceof(ref);
+        if (is_method(ref)) {
+            ref_new = ref;
+            
+            return ref_new;
+        }
         
-        switch (base) {
-            case "struct":
-            case "weakref":
-                ref_new = {};
-                break;
-                
-            case "function":
-                ref_new = ref;
-                break;
-                
-            default:
-                var constr = method(undefined, asset_get_index(base));
-                ref_new = new constr();
+        ref_new = {};
+        
+        var static_struct = static_get(ref);
+        if (static_struct != undefined) {
+            static_set(ref_new, static_struct);
         }
         
         var names = variable_struct_get_names(ref);
@@ -50,4 +46,4 @@ function deep_copy(ref) {
 }
 
 // GMEdit hint
-/// @hint deep_copy(ref:T)->T Returns a deep recursive copy of the provided array / struct / constructed struct
+/// @hint deep_copy<T>(ref:T)->T Returns a deep recursive copy of the provided array / struct / constructed struct
