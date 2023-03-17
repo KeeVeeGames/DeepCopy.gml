@@ -30,8 +30,8 @@ function deep_copy(ref) {
                 break;
                 
             default:
-                var constr = method(undefined, asset_get_index(base));
-                ref_new = new constr();
+                var constr = method(undefined, asset_get_index(cast base));
+                ref_new = new cast constr();
         }
         
         var names = variable_struct_get_names(ref);
@@ -50,4 +50,4 @@ function deep_copy(ref) {
 }
 
 // GMEdit hint
-/// @hint deep_copy(ref:T)->T Returns a deep recursive copy of the provided array / struct / constructed struct
+/// @hint deep_copy<T>(ref:T)->T Returns a deep recursive copy of the provided array / struct / constructed struct
