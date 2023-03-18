@@ -4,7 +4,7 @@
 
 This simple script lets you recursively deep copy nested arrays, structs and "class" instances. The syntax is pretty straightforward: `deep_copy(thing)` function will return a new instance of "thing" (new array, new anonymous struct or new "constructed" struct) with the same data and the respectful copies of all nested things.
 
-The method behind this is coming from my [finding](https://twitter.com/KeeVeeGames/status/1294268813807099905) of preserving struct's type / constructor. I also realized that I may create my own [serialization protocol](https://twitter.com/KeeVeeGames/status/1294988076553510912), but that will be released in future.
+There are two version of the script, post-2023.1 users should use the version from the main 'DeepCopy' subfolder. The principle of working here is updated and based on a [Static Struct](https://gamemaker.io/ru/blog/version-2023-dot-1-easy-collisions-crisper-fonts-and-new-audio-functionality) functionality intriduced in 2023.1 version. The 'Legacy' version is for the pre-2023.1 users (mainly 2.3 version) and is based on the method coming from my [finding](https://twitter.com/KeeVeeGames/status/1294268813807099905) of preserving struct's type / constructor. The legacy version will not be updated in the future.
 
 **Note:**
 * Copying ds'es won't deep copy them but pass them through as real numbers.<sup>✶</sup>
@@ -12,7 +12,7 @@ The method behind this is coming from my [finding](https://twitter.com/KeeVeeGam
 * There is no way to mark a field to not be "copiable".<sup>✶</sup>
 * Copying function references will shallow copy the reference to the original method, as deep copying functions is not possible (and doesn't make much sense).
 
-<sup>✶</sup> — you may consider using DeepCopy+ and Protoclasses as a part of GMProto framework, that are solving the problem of deep cloning ds'es, preventing circular references, adding the way to mark fields "unserializable" and having better type checking (not currently released, [stay tuned](https://twitter.com/KeeVeeGames)).
+<sup>✶</sup> — you may consider using Protoclasses as a part of GMProto framework, that are solving the problem of deep cloning ds'es, preventing circular references, adding the way to mark fields "unserializable" and having better type checking (not currently released, [stay tuned](https://twitter.com/KeeVeeGames)).
 
 ## Installation:
 Get the latest asset package from the [releases page](../../releases). Import it into IDE.   
