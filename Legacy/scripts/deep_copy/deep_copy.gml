@@ -22,6 +22,7 @@ function deep_copy(ref) {
         switch (base) {
             case "struct":
             case "weakref":
+			case undefined:
                 ref_new = {};
                 break;
                 
@@ -30,8 +31,8 @@ function deep_copy(ref) {
                 break;
                 
             default:
-                var constr = method(undefined, asset_get_index(cast base));
-                ref_new = new cast constr();
+                var constr = method(undefined, asset_get_index(/*#cast*/ base));
+                ref_new = new /*#cast*/ constr();
         }
         
         var names = variable_struct_get_names(ref);
