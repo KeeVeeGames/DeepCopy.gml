@@ -1,6 +1,6 @@
 # DeepCopy.gml
 
-[![Donate](https://img.shields.io/badge/donate-%E2%9D%A4-blue.svg)](https://musnik.itch.io/donate-me) [![License](https://img.shields.io/github/license/KeeVeeGames/DeepCopy.gml)](#!)
+[![Donate](https://img.shields.io/badge/donate-%E2%9D%A4-blue.svg)](https://musnik.itch.io/donate) [![License](https://img.shields.io/github/license/KeeVeeGames/DeepCopy.gml)](#!)
 
 This simple script lets you recursively deep copy nested arrays, structs and "class" instances. The syntax is pretty straightforward: `deep_copy(thing)` function will return a new instance of "thing" (new array, new anonymous struct or new "constructed" struct) with the same data and the respectful copies of all nested things.
 
